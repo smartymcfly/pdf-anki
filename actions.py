@@ -50,7 +50,7 @@ You are receiving the text from one slide of a lecture. Use the following princi
         while retries < max_retries:
             try:
                 completion = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo",
+                    model="gpt-4",
                     messages=[
                         {
                             "role": "system",
@@ -89,7 +89,7 @@ You are receiving the text from one slide of a lecture. Use the following princi
                         }
                     ],
                     # TODO: play with temperature
-                    temperature=0.9,
+                    temperature=0.7,
                     request_timeout=25,
                 )
                 
